@@ -1,10 +1,10 @@
-import { Button } from "@mui/material";
+import { Container } from "@mui/material";
+import Product from "./components/Product";
 
 export default function App() {
   return (
-    <>
-      <h1>App</h1>
-      <Button >Mi primer boton</Button>
-    </>
+    <Container>
+      <Product />
+    </Container>
   )
 }
