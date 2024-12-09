@@ -1,10 +1,11 @@
 import { Container } from "@mui/material";
-import Product from "./components/Product";
+import Navbar from "./components/navbar/Navbar";
 
 export default function App() {
   return (
-    <Container>
-      <Product />
-    </Container>
-  )
+    <>
+      <Navbar />
+      <Container sx={{ mt: 5 }}></Container>
+    </>
+  );
 }
