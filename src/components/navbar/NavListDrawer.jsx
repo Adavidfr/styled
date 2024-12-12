@@ -36,11 +36,13 @@ export default function NavListDrawer({ navArrayLinks, NavLink, setOpen }) {
 
 // Definir validaciones para las props
 NavListDrawer.propTypes = {
-  navLinks: PropTypes.arrayOf(
+  navArrayLinks: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.string.isRequired,
       path: PropTypes.string.isRequired,
       icon: PropTypes.element.isRequired,
     })
   ).isRequired,
+  NavLink: PropTypes.elementType.isRequired,
+  setOpen: PropTypes.func.isRequired,
 };

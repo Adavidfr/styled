@@ -12,6 +12,7 @@ import { useState } from "react";
 
 import { Box } from "@mui/system";
 import { NavLink } from "react-router-dom";
+import PropTypes from "prop-types";
 
 export default function Navbar({ navArrayLinks }) {
   const [open, setOpen] = useState(false);
@@ -65,3 +66,13 @@ export default function Navbar({ navArrayLinks }) {
     </>
   );
 }
+
+// Definir validaciones para las props
+Navbar.propTypes = {
+  navArrayLinks: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      path: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+};
